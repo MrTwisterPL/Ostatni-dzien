@@ -1,0 +1,31 @@
+.pop {
+    position: absolute;
+    display:block;
+    @extend %glass;
+    padding:15px;
+    height:300px;
+    width: 300px;
+    background-color: white;
+    color:rgb(66, 66, 66);
+    & > h4 {
+        font-size: 20px;
+        font-weight: 600;
+        & > button {
+            font-size:20px;
+            margin-left:150px;
+            border:none;
+            border-radius: 15px;
+            transition: 0.5s;
+            animation-duration: 0.6s;
+            animation-fill-mode:forwards;
+        
+        }
+        & > button:hover {
+            background-color: grey;
+        }
+        & > button:checked ~ .test {
+            display:none;
+    
+        }
+    }
+}

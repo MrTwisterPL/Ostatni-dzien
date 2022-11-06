@@ -1,0 +1,13 @@
+@mixin text ($a, $b, $c, $d:0) {
+    font-size: $a;
+    font-weight: $b;
+    color:$c;
+    letter-spacing: $d;
+}
+@mixin flex($justify,$align,$gap:0) {
+
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap:$gap;
+}

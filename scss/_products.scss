@@ -1,0 +1,119 @@
+.products {
+    @include flex(center,center,18px);
+    margin: 10px 10px 50px 10px;
+    @media (max-width:1100px) {
+        flex-wrap: wrap;
+    }
+    @media (max-width:799px) {
+        flex-direction: column;
+    }
+}
+.product-title {
+    text-align: center;
+    font-size: 40px;
+    margin: 20px auto;
+    color:$color-white;
+}
+.product {
+    border-radius:10px;
+    width: 350px;
+    @extend %glass;
+    transition: 0.5s;
+    @media (max-width:1100px) {
+        width: 48%;
+    }
+    @media (max-width:768px) {
+        width: 100%;
+    }
+
+    & > img {
+        object-fit:scale-down;
+        justify-content:center;
+        width: 80%;
+        height: 250px;
+        margin:30px 34px;
+        border-radius: 15px;
+        box-shadow: 5px 2px 5px black;
+        background-color: $color-white;
+    }
+}
+ 
+    
+
+.featured {
+    background-color: gray;
+    padding:10px;
+    margin-left:15px;
+    box-shadow: 2px 2px 2px black;
+    font-size:19px;
+    position:relative;
+    bottom:20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.product:hover {
+    transform:translateY(-15px);
+    background-color: rgba(255, 255, 255, 0.226);
+}
+.product-info{
+    & > .name {
+        padding:10px;
+        border-bottom: 2px solid rgba(128, 128, 128, 0.664);
+        & > h3 {
+            color:$color-white;
+            margin-left:20px;
+            font-size: 40px;
+            padding:7px;
+        }
+        & > h4 {
+            color:rgba(128, 128, 128, 0.671);
+            margin-left:30px;
+    
+        }
+    }
+    
+}
+
+.stars {
+    padding:10px;
+    margin:10px 0 20px 25px;
+     & > i {
+        color:orangered;
+     }
+    & > .rate {
+        background-color: rgb(1, 223, 1);
+        color:$color-white;
+        padding:8px;
+        margin-left:10px;
+        border-radius: 10px;
+    }
+
+}
+.product-price {
+    font-size:20px;
+    margin:0 0 40px 30px;
+    & > .promotion {
+        text-decoration: line-through;
+        color:$color-white;
+        font-size:30px;
+    }
+    & > span {
+        color:red;
+    }
+    & > button {
+        background-color: $color-green;
+        border:none;
+        padding:10px;
+        font-size:25px;
+        color:$color-white;
+        border-radius: 15px;
+        margin-left:20px;
+        transition:0.5s;
+    }
+    & > button:hover {
+        background-color: green;
+        cursor:pointer;
+    }
+   
+}
